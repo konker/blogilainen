@@ -7,6 +7,21 @@
                 <xsl:copy-of select="/html/head/*"/>
             </head>
             <body>
+                <nav id="main-nav">
+                    <ul>
+                        <xsl:for-each select="/html/resources/resource">
+                            <li>
+                                <a>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="meta[@name='Identifier']/@content"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="meta[@name='Identifier']/@content"/>
+                                </a>
+                            </li>
+                        </xsl:for-each>
+                    </ul>
+                </nav>
+                <hr/>
                 <div id="content">
                     <xsl:call-template name="page-title"/>
                     <xsl:call-template name="page-date"/>

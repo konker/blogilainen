@@ -50,17 +50,25 @@ def main():
     for srcpath,basepath,srcfile in sources:
         src = os.path.join(srcpath, srcfile) 
         xml = etree.parse(src)
+        xml.getroot().append(aggregate_meta)
+        print(etree.tostring(xml, pretty_print=True))
         formats = get_formats(xml)
 
         basename,ext = os.path.splitext(srcfile)
         for format in formats:
-            outf = "%s.%s" % (basename, format)
-            target = os.path.abspath(os.path.join(OUT_DIR, basepath, outf))
+            outfile = "%s.%s" % (basename, format)
+            outpath = os.path.abspath(os.path.join(OUT_DIR, basepath))
+            out = os.path.join(outpath, outfile)
 
-            with open(target, 'w') as f:
+            # make sure that outpath exists
+            if not os.path.exists(outpath):
+                os.makedirs(outpath) 
+
+            # execute XSLT transform and write output file
+            with open(out, 'w') as f:
                 f.write(etree.tostring(transform(xml), pretty_print=True))
 
-            print(src, '->', target)
+            print(src, '->', out)
 
 
 def generate_aggregate_meta(sources):
