@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Syncilainen - Automatically sync file changes to a Git repository</title>
+    <meta name="Identifier" content="autosync-git-repository"/>
+    <meta name="Date" content="2011-12-12T16:36:00"/>
+    <meta name="Creator" content="Konrad Markus"/>
+    <meta name="Format" content="html"/>
+    <meta name="Subject" content="Programming"/>
+    <meta name="Subject" content="Python"/>
+    <meta name="Subject" content="Git"/>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Syncilainen - Automatically sync file changes to a Git repository</h1>
+      <h2 class="date">2011-12-12T16:36:00</h2>
+      <h2 class="date">Konrad Markus</h2>
+      <p class="leader">
+            A small daemon which monitors changes in a directory and automatically syncs it to a remote git repository.
+        </p>
+      <p>
+            I have git a repository <a href="git-on-s3">hosted ultimately on S3</a> in which I store notes and other sundry (mostly text-based) files. I wanted a way to automatically sync these to the remote repository, without having to manually add/commit/push. Mostly for convenience.
+        </p>
+      <p>
+            So syncilainen was born. It's written in python and relies on the git command-line tool being installed on the system. It then uses <a href="http://pypi.python.org/pypi/MacFSEvents/0.2.1">MacFSEvents</a> on Mac OSX, or <a href="https://github.com/seb-m/pyinotify">pyinotify</a> on Linux, to watch for filesystem events; e.g. writing to a file, removing a file etc. Once an event is detected, a callback function is triggered, which in this case does a git add/commit in the watched directory, and then pushes to the remote repository.
+        </p>
+      <p>
+            It tries to be conservative when a conflict is detected, however the system is not really designed to withstand heavy collaborative use.
+        </p>
+      <p>
+            If a conflict is detected, the remote's version (<em style="color:#ff0000">"theirs"</em>) is renamed with the sha1 hash prepended to the filename, and the local copy (<em style="color:#ff0000">"ours"</em>) is forced as the current version. This works OK when I am the only person editing stuff at the same time, and I only have different instances on the diffrerent computers that I use.
+        </p>
+      <p>
+            I am considering to add a periodic git pull action, to make sure that the local repository is up to date, even if no filesystem events have been executed.
+        </p>
+      <p>
+            Syncilainen use the python <a href="http://docs.python.org/library/subprocess.html">subprocess</a> module to make system calls to the git command line tool.
+        </p>
+      <p>
+            Syncilainen is configured with a JSON formatted config file which can be specified when invoking syncilainen, or to "syncilainen.json" by default.
+        </p>
+      <p>
+            It is possibe to daemonize syncilainen, such that it works "behind the scenes". At the moment, current approaches are conflicting with the use of the subprocess module to invoke the git command line. A workaround for this problem is in progress.
+        </p>
+      <p>
+            The code has made an attempt at a structure such that different filesystem event libraries or different version control systems could be used, (indeed ultimately any kind of callback could be writted). However at this time, only git has been tried as a version contol backend.
+        </p>
+      <p>
+            Syncialinen optionally uses growlnotify on Mac OS X, or notifysend on Linux (XXX: gnome?) to display notification messages when the callback is triggered.
+        </p>
+      <h2>Code</h2>
+      <p>
+           <a href="http://github.com/konker/syncilainen">http://github.com/konker/syncilainen</a> 
+        </p>
+    </div>
+  </body>
+</html>
