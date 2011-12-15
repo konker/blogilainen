@@ -1,0 +1,19 @@
+Blogilainen
+==============================================================================
+
+- output format should be passed to the stylesheet as parameter
+    - possibly with "link"?
+    - could then use xslt modes for outputting different formats?
+
+- resources metadata
+    - name of this?
+    - at the moment is being inserted into the src xml document
+        - should find alternative
+            - could write to an xml file
+                - can xsl import an xml file into a document?
+            - can we pass a document fragment as a param?
+                - maybe need extension of some kind?
+
+        - should also think about writing/debugging xslt
+            - pos. without dynamic generation of resource metadata
+
