@@ -16,4 +16,7 @@ Blogilainen
 
         - should also think about writing/debugging xslt
             - pos. without dynamic generation of resource metadata
-
+- plugin architecture?
+    - i.e. dynamiclally load all modules in a certain package
+        - e.g. for meta generation
+            - adding extra meta elements

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:exsl="http://exslt.org/common">
+
+    <!-- load in 'resources.xml' -->
+    <xsl:variable name="resources" select="document('resources.xml')"/>
+
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
         <html>
@@ -7,9 +13,10 @@
                 <xsl:copy-of select="/html/head/*"/>
             </head>
             <body>
+                [<xsl:copy-of select="$resources"/>]
                 <nav id="main-nav">
                     <ul>
-                        <xsl:for-each select="/html/resources/resource">
+                        <xsl:for-each select="$resources/resources/resource">
                             <li>
                                 <a>
                                     <xsl:attribute name="href">
