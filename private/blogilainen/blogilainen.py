@@ -9,7 +9,7 @@ from target import Target
 #import plugins.resource.enabled.get_meta_tags
 
 RESOURCES_XML_DIR = 'xslt'
-RESOURCES_XML = os.path.join(RESOURCES_XML_DIR, 'resources.xml')
+RESOURCES_XML = os.path.join(RESOURCES_XML_DIR, 'all-resources-meta.xml')
 
 BASE_PACKAGE = 'blogilainen.plugins'
 
@@ -54,9 +54,14 @@ class Blogilainen(object):
 
                 # execute XSLT transform and write output file
                 with open(t.out, 'w') as fh:
-                    fh.write(etree.tostring(transform(xml, format=etree.XSLT.strparam(t.ext))))
+                    content = etree.tostring(transform(xml, format=etree.XSLT.strparam(t.ext)))
+                    if content:
+                        fh.write(content)
+                        print("OK: %s -> %s" % (s.src, t.out))
+                    else:
+                        print("FAILED: %s -> %s" % (s.src, t.out))
 
-                print("%s -> %s" % (s.src, t.out))
+
 
 
     def generate_resources_meta(self):

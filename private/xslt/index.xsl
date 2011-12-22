@@ -5,26 +5,34 @@
 
     <xsl:param name="format"/>
 
-    <!-- load in 'resources.xml' -->
-    <xsl:variable name="resources" select="document('resources.xml')"/>
+    <!-- load in 'all-resources-meta.xml' -->
+    <xsl:variable name="all-resources-meta" select="document('all-resources-meta.xml')"/>
 
     <xsl:template match="/">
+        <xsl:choose>
+            <xsl:when test="$format = 'html'">
+                <xsl:apply-templates mode="html"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template match="resource" mode="html">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
         <html>
             <head>
-                <xsl:copy-of select="/html/head/*"/>
+                <xsl:copy-of select="/resource/head/*"/>
             </head>
             <body>
                 [<xsl:copy-of select="$format"/>]
                 <nav id="main-nav">
                     <ul>
-                        <xsl:for-each select="$resources/resources/resource">
+                        <xsl:for-each select="$all-resources-meta/resources/resource">
                             <li>
                                 <a>
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="concat(sys-meta/meta[@name='relpath']/@content, '/', src-meta/meta[@name='Identifier']/@content, '.', $format)"/>
+                                        <xsl:value-of select="concat(system-meta/meta[@name='relpath']/@content, '/', source-meta/meta[@name='Identifier']/@content, '.', $format)"/>
                                     </xsl:attribute>
-                                    <xsl:value-of select="src-meta/meta[@name='Identifier']/@content"/>
+                                    <xsl:value-of select="source-meta/meta[@name='Identifier']/@content"/>
                                 </a>
                             </li>
                         </xsl:for-each>
@@ -36,7 +44,7 @@
                     <xsl:call-template name="page-date"/>
                     <xsl:call-template name="page-creator"/>
 
-                    <xsl:apply-templates select="/html/body/*"/>
+                    <xsl:apply-templates select="/resource/body/*"/>
                 </div>
             </body>
         </html>
@@ -50,15 +58,15 @@
     </xsl:template>
 
     <xsl:template name="page-title">
-        <h1><xsl:value-of select="/html/head/title"/></h1>
+        <h1><xsl:value-of select="/resource/head/title"/></h1>
     </xsl:template>
 
     <xsl:template name="page-date">
-        <h2 class="date"><xsl:value-of select="/html/head/meta[@name='Date']/@content"/></h2>
+        <h2 class="date"><xsl:value-of select="/resource/head/meta[@name='Date']/@content"/></h2>
     </xsl:template>
 
     <xsl:template name="page-creator">
-        <h2 class="date"><xsl:value-of select="/html/head/meta[@name='Creator']/@content"/></h2>
+        <h2 class="date"><xsl:value-of select="/resource/head/meta[@name='Creator']/@content"/></h2>
     </xsl:template>
 
     <xsl:template match="em">

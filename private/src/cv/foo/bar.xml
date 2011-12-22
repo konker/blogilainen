@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<html>
+<resource>
     <head>
         <title>Syncilainen - Automatically sync file changes to a Git repository</title>
         <meta name="Identifier" content="cv-bar"/>
@@ -48,4 +48,4 @@
            <a href="http://github.com/konker/syncilainen">http://github.com/konker/syncilainen</a> 
         </p>
     </body>
-</html>
+</resource>

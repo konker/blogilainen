@@ -1,6 +1,6 @@
 <resources>
   <resource>
-    <src-meta><meta name="Identifier" content="autosync-git-repository"/>
+    <source-meta><meta name="Identifier" content="autosync-git-repository"/>
         <meta name="Date" content="2011-12-12T16:36:00"/>
         <meta name="Creator" content="Konrad Markus"/>
         <meta name="Format" content="html"/>
@@ -8,42 +8,72 @@
         <meta name="Subject" content="Programming"/>
         <meta name="Subject" content="Python"/>
         <meta name="Subject" content="Git"/>
-    </src-meta>
-    <sys-meta>
+    </source-meta>
+    <target-meta>
+      <target type="xhtml">
+        <meta content="/Users/konker/WORKING/blogilainen/public" name="outpath"/>
+        <meta content="index.xhtml" name="outfile"/>
+        <meta content="xhtml" name="ext"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/index.xhtml" name="out"/>
+      </target>
+      <target type="html">
+        <meta content="/Users/konker/WORKING/blogilainen/public" name="outpath"/>
+        <meta content="index.html" name="outfile"/>
+        <meta content="html" name="ext"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/index.html" name="out"/>
+      </target>
+    </target-meta>
+    <system-meta>
       <meta content="/Users/konker/WORKING/blogilainen/private/src" name="srcpath"/>
       <meta content="." name="relpath"/>
       <meta content="index.xml" name="srcfile"/>
       <meta content="/Users/konker/WORKING/blogilainen/private/src/index.xml" name="src"/>
-    </sys-meta>
+    </system-meta>
   </resource>
   <resource>
-    <src-meta><meta name="Identifier" content="cv"/>
+    <source-meta><meta name="Identifier" content="cv"/>
         <meta name="Date" content="2011-12-12T16:36:00"/>
         <meta name="Creator" content="Konrad Markus"/>
         <meta name="Format" content="html"/>
         <meta name="Subject" content="CV"/>
         <meta name="Subject" content="Resume"/>
-    </src-meta>
-    <sys-meta>
+    </source-meta>
+    <target-meta>
+      <target type="html">
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv" name="outpath"/>
+        <meta content="home.html" name="outfile"/>
+        <meta content="html" name="ext"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv/home.html" name="out"/>
+      </target>
+    </target-meta>
+    <system-meta>
       <meta content="/Users/konker/WORKING/blogilainen/private/src/cv" name="srcpath"/>
       <meta content="cv" name="relpath"/>
       <meta content="home.xml" name="srcfile"/>
       <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/home.xml" name="src"/>
-    </sys-meta>
+    </system-meta>
   </resource>
   <resource>
-    <src-meta><meta name="Identifier" content="cv-bar"/>
+    <source-meta><meta name="Identifier" content="cv-bar"/>
         <meta name="Date" content="2011-12-12T16:36:00"/>
         <meta name="Creator" content="Konrad Markus"/>
         <meta name="Format" content="html"/>
         <meta name="Subject" content="Bar"/>
         <meta name="Subject" content="Baz"/>
-    </src-meta>
-    <sys-meta>
+    </source-meta>
+    <target-meta>
+      <target type="html">
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo" name="outpath"/>
+        <meta content="bar.html" name="outfile"/>
+        <meta content="html" name="ext"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo/bar.html" name="out"/>
+      </target>
+    </target-meta>
+    <system-meta>
       <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo" name="srcpath"/>
       <meta content="cv/foo" name="relpath"/>
       <meta content="bar.xml" name="srcfile"/>
       <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo/bar.xml" name="src"/>
-    </sys-meta>
+    </system-meta>
   </resource>
 </resources>

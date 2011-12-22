@@ -8,15 +8,15 @@ from blogilainen.plugins import BasePlugin
 class Plugin(BasePlugin):
     def run(self, source, resource):
         get_meta = etree.XPath("//meta")
-        src_meta = etree.Element('src-meta')
+        source_meta = etree.Element('source-meta')
 
         xml = etree.parse(source.src)
         metas = get_meta(xml)
         for m in metas:
-            src_meta.append(m)
+            source_meta.append(m)
 
         # add to resource
-        resource.append(src_meta)
+        resource.append(source_meta)
 
         return resource
 
