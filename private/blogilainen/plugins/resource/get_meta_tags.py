@@ -5,19 +5,18 @@ from lxml import etree
 
 from blogilainen.plugins import BasePlugin
 
-AGGREGATE_XSLT_DIR = os.path.join('xslt', 'aggregate')
-AGGREGATE_XSLT = os.path.join(AGGREGATE_XSLT_DIR, 'index.xsl')
-
 class Plugin(BasePlugin):
-    def meta(self, source, resource):
-        transform = etree.XSLT(etree.parse(AGGREGATE_XSLT))
+    def run(self, source, resource):
+        get_meta = etree.XPath("//meta")
+        src_meta = etree.Element('src-meta')
 
-        # XXX: do we need this? xslt here complicates things?
-        # execute AGGREGATE_XSLT against src file
         xml = etree.parse(source.src)
-        meta = transform(xml).getroot()
+        metas = get_meta(xml)
+        for m in metas:
+            src_meta.append(m)
 
         # add to resource
-        resource.append(meta)
+        resource.append(src_meta)
+
         return resource
 

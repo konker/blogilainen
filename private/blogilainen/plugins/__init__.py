@@ -5,6 +5,6 @@
 #
 
 class BasePlugin(object):
-    def meta(self, source, aggregate_meta):
+    def run(self, source, resource):
         pass
 

@@ -65,7 +65,7 @@ class Blogilainen(object):
         for s in self.sources:
             resource = etree.Element('resource')
             for k, plugin in self.resource_plugins.iteritems():
-                plugin.meta(s, resource)
+                plugin.run(s, resource)
 
             resources_meta.append(resource)
 
