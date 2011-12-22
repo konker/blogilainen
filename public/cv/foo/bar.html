@@ -1,56 +1,6 @@
-<html xmlns:exsl="http://exslt.org/common"><head><title>Syncilainen - Automatically sync file changes to a Git repository</title><meta name="Identifier" content="cv"/><meta name="Date" content="2011-12-12T16:36:00"/><meta name="Creator" content="Konrad Markus"/><meta name="Format" content="html"/><meta name="Subject" content="CV"/><meta name="Subject" content="Resume"/></head><body>
-                [<resources>
-  <resource>
-    <src-meta id="autosync-git-repository">
-      <meta name="Identifier" content="autosync-git-repository"/>
-      <meta name="Date" content="2011-12-12T16:36:00"/>
-      <meta name="Creator" content="Konrad Markus"/>
-      <meta name="Format" content="html"/>
-      <meta name="Subject" content="Programming"/>
-      <meta name="Subject" content="Python"/>
-      <meta name="Subject" content="Git"/>
-    </src-meta>
-    <sys-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src" name="srcpath"/>
-      <meta content="." name="relpath"/>
-      <meta content="index.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/index.xml" name="src"/>
-    </sys-meta>
-  </resource>
-  <resource>
-    <src-meta id="cv">
-      <meta name="Identifier" content="cv"/>
-      <meta name="Date" content="2011-12-12T16:36:00"/>
-      <meta name="Creator" content="Konrad Markus"/>
-      <meta name="Format" content="html"/>
-      <meta name="Subject" content="CV"/>
-      <meta name="Subject" content="Resume"/>
-    </src-meta>
-    <sys-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv" name="srcpath"/>
-      <meta content="cv" name="relpath"/>
-      <meta content="home.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/home.xml" name="src"/>
-    </sys-meta>
-  </resource>
-  <resource>
-    <src-meta id="cv">
-      <meta name="Identifier" content="cv"/>
-      <meta name="Date" content="2011-12-12T16:36:00"/>
-      <meta name="Creator" content="Konrad Markus"/>
-      <meta name="Format" content="html"/>
-      <meta name="Subject" content="CV"/>
-      <meta name="Subject" content="Resume"/>
-    </src-meta>
-    <sys-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo" name="srcpath"/>
-      <meta content="cv/foo" name="relpath"/>
-      <meta content="bar.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo/bar.xml" name="src"/>
-    </sys-meta>
-  </resource>
-</resources>]
-                <nav id="main-nav"><ul><li><a href=""/></li><li><a href=""/></li><li><a href=""/></li></ul></nav><hr/><div id="content"><h1>Syncilainen - Automatically sync file changes to a Git repository</h1><h2 class="date">2011-12-12T16:36:00</h2><h2 class="date">Konrad Markus</h2><p class="leader">
+<html xmlns:exsl="http://exslt.org/common"><head><title>Syncilainen - Automatically sync file changes to a Git repository</title><meta name="Identifier" content="cv-bar"/><meta name="Date" content="2011-12-12T16:36:00"/><meta name="Creator" content="Konrad Markus"/><meta name="Format" content="html"/><meta name="Subject" content="Bar"/><meta name="Subject" content="Baz"/></head><body>
+                [html]
+                <nav id="main-nav"><ul><li><a href="./autosync-git-repository.html">autosync-git-repository</a></li><li><a href="cv/cv.html">cv</a></li><li><a href="cv/foo/cv-bar.html">cv-bar</a></li></ul></nav><hr/><div id="content"><h1>Syncilainen - Automatically sync file changes to a Git repository</h1><h2 class="date">2011-12-12T16:36:00</h2><h2 class="date">Konrad Markus</h2><p class="leader">
             A small daemon which monitors changes in a directory and automatically syncs it to a remote git repository.
         </p><p>
             I have git a repository <a href="git-on-s3">hosted ultimately on S3</a> in which I store notes and other sundry (mostly text-based) files. I wanted a way to automatically sync these to the remote repository, without having to manually add/commit/push. Mostly for convenience.

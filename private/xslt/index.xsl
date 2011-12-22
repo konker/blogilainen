@@ -3,6 +3,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common">
 
+    <xsl:param name="format"/>
+
     <!-- load in 'resources.xml' -->
     <xsl:variable name="resources" select="document('resources.xml')"/>
 
@@ -13,16 +15,16 @@
                 <xsl:copy-of select="/html/head/*"/>
             </head>
             <body>
-                [<xsl:copy-of select="$resources"/>]
+                [<xsl:copy-of select="$format"/>]
                 <nav id="main-nav">
                     <ul>
                         <xsl:for-each select="$resources/resources/resource">
                             <li>
                                 <a>
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="meta[@name='Identifier']/@content"/>
+                                        <xsl:value-of select="concat(sys-meta/meta[@name='relpath']/@content, '/', src-meta/meta[@name='Identifier']/@content, '.', $format)"/>
                                     </xsl:attribute>
-                                    <xsl:value-of select="meta[@name='Identifier']/@content"/>
+                                    <xsl:value-of select="src-meta/meta[@name='Identifier']/@content"/>
                                 </a>
                             </li>
                         </xsl:for-each>
