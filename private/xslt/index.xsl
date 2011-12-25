@@ -30,7 +30,7 @@
                             <li>
                                 <a>
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="concat(system-meta/meta[@name='relpath']/@content, '/', target-meta/target[@type=$format]/meta[@name='outfile']/@content)"/>
+                                        <xsl:value-of select="concat('file:///Users/konker/WORKING/blogilainen/public', target-meta/target[@type=$format]/meta[@name='virtual-path']/@content, '/', target-meta/target[@type=$format]/meta[@name='out-file']/@content)"/>
                                     </xsl:attribute>
                                     <xsl:value-of select="source-meta/meta[@name='Identifier']/@content"/>
                                 </a>

@@ -10,7 +10,7 @@ class Plugin(BasePlugin):
         get_meta = etree.XPath("//meta")
         source_meta = etree.Element('source-meta')
 
-        xml = etree.parse(source.src)
+        xml = etree.parse(source.source)
         metas = get_meta(xml)
         for m in metas:
             source_meta.append(m)

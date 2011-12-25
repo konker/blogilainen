@@ -10,8 +10,9 @@ class Plugin(BasePlugin):
         for ext,t in source.targets.iteritems():
             target = etree.Element('target', type=ext)
 
-            target.append(etree.Element('meta', name='outpath', content=t.outpath))
-            target.append(etree.Element('meta', name='outfile', content=t.outfile))
+            target.append(etree.Element('meta', name='physical-path', content=t.physical_path))
+            target.append(etree.Element('meta', name='virtual-path', content=t.virtual_path))
+            target.append(etree.Element('meta', name='out-file', content=t.out_file))
             target.append(etree.Element('meta', name='ext', content=t.ext))
             target.append(etree.Element('meta', name='out', content=t.out))
 

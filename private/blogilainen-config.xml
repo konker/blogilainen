@@ -1,0 +1,6 @@
+<config>
+    <source-dir>src</source-dir>
+    <out-dir>../public'</out-dir>
+    <xslt-file>index.xml</xslt-file>
+    <resources-meta>xslt/all-resources-meta.xml</resources-meta>
+</config>

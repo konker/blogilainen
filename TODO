@@ -1,9 +1,58 @@
 Blogilainen
 ==============================================================================
 
+- is the whole idea flawed?
+    - revert to wiki or markdown?
+        - use existing system such as jekyll, etc?
+
+- what could we do to drastically simplify?
+    - assume html output, in one place
+    - assume can hardcode links as normal <a href="..">..</a>
+    - keep xml
+    - keep xslt
+    - keep all-resources-meta.xml?
+
+
+- what about 2-stage process: (markdown) -> xml -> output?
+    - any md files found are first converted to resource xml format
+    - continue as usual
+    - allows md for most things with specific xml for e.g. CV
+    - is this over-egging the pudding?
+
+- do we want to have multiple runs rather than multiple outputs
+  from the same run?
+    - could then specify alternative output directories?
+        - where would this be specified
+            - (must work as post-commit hook..)
+            - some kind of config file?
+                - XML?
+                - config format?
+
+- could we have some kind of (optional) indexing stage?
+    - what for if it is a static site?
+
 - output format should be passed to the stylesheet as parameter
-    - possibly with "link"?
     - could then use xslt modes for outputting different formats?
+
+- at the moment we have support for alternative extensions/versions of files 
+  in the same target path
+    - is this at all useful?
+        - most likely not
+        - SCRAP?
+
+    - what about the same extension in alternative paths?
+        - e.g. /public/html/index.html
+               /public/mobile/index.html
+
+        - path prefix?
+        - path descriptor, "/mobile/%r/%f.%e"
+            - substitute %x for some variable value?
+
+- Does this only work with absolute/root-relative links?
+    - or would you need to resolve the link at run time for each output?
+        - sounds too messy...
+
+- <a resource="__id__">..</a>
 
 - resources metadata
     - name of this?
@@ -20,3 +69,4 @@ Blogilainen
     - i.e. dynamiclally load all modules in a certain package
         - e.g. for meta generation
             - adding extra meta elements
+

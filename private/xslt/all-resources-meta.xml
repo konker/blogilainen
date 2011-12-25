@@ -4,30 +4,24 @@
         <meta name="Date" content="2011-12-12T16:36:00"/>
         <meta name="Creator" content="Konrad Markus"/>
         <meta name="Format" content="html"/>
-        <meta name="Format" content="xhtml"/>
         <meta name="Subject" content="Programming"/>
         <meta name="Subject" content="Python"/>
         <meta name="Subject" content="Git"/>
     </source-meta>
     <target-meta>
-      <target type="xhtml">
-        <meta content="/Users/konker/WORKING/blogilainen/public" name="outpath"/>
-        <meta content="index.xhtml" name="outfile"/>
-        <meta content="xhtml" name="ext"/>
-        <meta content="/Users/konker/WORKING/blogilainen/public/index.xhtml" name="out"/>
-      </target>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public" name="outpath"/>
-        <meta content="index.html" name="outfile"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public" name="physical-path"/>
+        <meta content="/." name="virtual-path"/>
+        <meta content="index.html" name="out-file"/>
         <meta content="html" name="ext"/>
         <meta content="/Users/konker/WORKING/blogilainen/public/index.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src" name="srcpath"/>
-      <meta content="." name="relpath"/>
-      <meta content="index.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/index.xml" name="src"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src" name="source-path"/>
+      <meta content="." name="relative-path"/>
+      <meta content="index.xml" name="source-file"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src/index.xml" name="source"/>
     </system-meta>
   </resource>
   <resource>
@@ -40,17 +34,18 @@
     </source-meta>
     <target-meta>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv" name="outpath"/>
-        <meta content="home.html" name="outfile"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv" name="physical-path"/>
+        <meta content="/cv" name="virtual-path"/>
+        <meta content="home.html" name="out-file"/>
         <meta content="html" name="ext"/>
         <meta content="/Users/konker/WORKING/blogilainen/public/cv/home.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv" name="srcpath"/>
-      <meta content="cv" name="relpath"/>
-      <meta content="home.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/home.xml" name="src"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv" name="source-path"/>
+      <meta content="cv" name="relative-path"/>
+      <meta content="home.xml" name="source-file"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/home.xml" name="source"/>
     </system-meta>
   </resource>
   <resource>
@@ -63,17 +58,18 @@
     </source-meta>
     <target-meta>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo" name="outpath"/>
-        <meta content="bar.html" name="outfile"/>
+        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo" name="physical-path"/>
+        <meta content="/cv/foo" name="virtual-path"/>
+        <meta content="bar.html" name="out-file"/>
         <meta content="html" name="ext"/>
         <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo/bar.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo" name="srcpath"/>
-      <meta content="cv/foo" name="relpath"/>
-      <meta content="bar.xml" name="srcfile"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo/bar.xml" name="src"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo" name="source-path"/>
+      <meta content="cv/foo" name="relative-path"/>
+      <meta content="bar.xml" name="source-file"/>
+      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo/bar.xml" name="source"/>
     </system-meta>
   </resource>
 </resources>
