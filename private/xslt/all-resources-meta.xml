@@ -1,75 +1,78 @@
 <resources>
   <resource>
-    <source-meta><meta name="Identifier" content="autosync-git-repository"/>
-        <meta name="Date" content="2011-12-12T16:36:00"/>
-        <meta name="Creator" content="Konrad Markus"/>
-        <meta name="Format" content="html"/>
-        <meta name="Subject" content="Programming"/>
-        <meta name="Subject" content="Python"/>
-        <meta name="Subject" content="Git"/>
+    <source-meta><meta name="dcterms.Identifier" content="autosync-git-repository"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Programming"/>
+        <meta name="dcterms.Subject" content="Python"/>
+        <meta name="dcterms.Subject" content="Git"/>
     </source-meta>
     <target-meta>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public" name="physical-path"/>
-        <meta content="/." name="virtual-path"/>
+        <meta content="." name="out-path"/>
+        <meta content="index" name="basename"/>
+        <meta content="html" name="ext"/>
         <meta content="index.html" name="out-file"/>
-        <meta content="html" name="ext"/>
-        <meta content="/Users/konker/WORKING/blogilainen/public/index.html" name="out"/>
+        <meta content="index.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src" name="source-path"/>
-      <meta content="." name="relative-path"/>
+      <meta content="." name="source-path"/>
+      <meta content="index" name="basename"/>
+      <meta content="xml" name="ext"/>
       <meta content="index.xml" name="source-file"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/index.xml" name="source"/>
+      <meta content="index.xml" name="source"/>
     </system-meta>
   </resource>
   <resource>
-    <source-meta><meta name="Identifier" content="cv"/>
-        <meta name="Date" content="2011-12-12T16:36:00"/>
-        <meta name="Creator" content="Konrad Markus"/>
-        <meta name="Format" content="html"/>
-        <meta name="Subject" content="CV"/>
-        <meta name="Subject" content="Resume"/>
+    <source-meta><meta name="dcterms.Identifier" content="cv"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="CV"/>
+        <meta name="dcterms.Subject" content="Resume"/>
     </source-meta>
     <target-meta>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv" name="physical-path"/>
-        <meta content="/cv" name="virtual-path"/>
+        <meta content="cv" name="out-path"/>
+        <meta content="home" name="basename"/>
+        <meta content="html" name="ext"/>
         <meta content="home.html" name="out-file"/>
-        <meta content="html" name="ext"/>
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv/home.html" name="out"/>
+        <meta content="cv/home.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv" name="source-path"/>
-      <meta content="cv" name="relative-path"/>
+      <meta content="cv" name="source-path"/>
+      <meta content="home" name="basename"/>
+      <meta content="xml" name="ext"/>
       <meta content="home.xml" name="source-file"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/home.xml" name="source"/>
+      <meta content="cv/home.xml" name="source"/>
     </system-meta>
   </resource>
   <resource>
-    <source-meta><meta name="Identifier" content="cv-bar"/>
-        <meta name="Date" content="2011-12-12T16:36:00"/>
-        <meta name="Creator" content="Konrad Markus"/>
-        <meta name="Format" content="html"/>
-        <meta name="Subject" content="Bar"/>
-        <meta name="Subject" content="Baz"/>
+    <source-meta><meta name="dcterms.Identifier" content="cv-bar"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Bar"/>
+        <meta name="dcterms.Subject" content="Baz"/>
     </source-meta>
     <target-meta>
       <target type="html">
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo" name="physical-path"/>
-        <meta content="/cv/foo" name="virtual-path"/>
-        <meta content="bar.html" name="out-file"/>
+        <meta content="cv/foo" name="out-path"/>
+        <meta content="bar" name="basename"/>
         <meta content="html" name="ext"/>
-        <meta content="/Users/konker/WORKING/blogilainen/public/cv/foo/bar.html" name="out"/>
+        <meta content="bar.html" name="out-file"/>
+        <meta content="cv/foo/bar.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo" name="source-path"/>
-      <meta content="cv/foo" name="relative-path"/>
+      <meta content="cv/foo" name="source-path"/>
+      <meta content="bar" name="basename"/>
+      <meta content="xml" name="ext"/>
       <meta content="bar.xml" name="source-file"/>
-      <meta content="/Users/konker/WORKING/blogilainen/private/src/cv/foo/bar.xml" name="source"/>
+      <meta content="cv/foo/bar.xml" name="source"/>
     </system-meta>
   </resource>
 </resources>

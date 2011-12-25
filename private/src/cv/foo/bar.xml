@@ -2,12 +2,12 @@
 <resource>
     <head>
         <title>CV/FOO/BAR: Syncilainen - Automatically sync file changes to a Git repository</title>
-        <meta name="Identifier" content="cv-bar"/>
-        <meta name="Date" content="2011-12-12T16:36:00"/>
-        <meta name="Creator" content="Konrad Markus"/>
-        <meta name="Format" content="html"/>
-        <meta name="Subject" content="Bar"/>
-        <meta name="Subject" content="Baz"/>
+        <meta name="dcterms.Identifier" content="cv-bar"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Bar"/>
+        <meta name="dcterms.Subject" content="Baz"/>
     </head>
     <body>
         <p class="leader">

@@ -38,9 +38,6 @@ class Blogilainen(object):
     def generate(self):
         # generate the aggregate resources meta data and write it to file
         # XXX: param to govern overwriting of this file?
-        # XXX: xslt hardcodes this file path?
-        #resources_meta = self.generate_resources_meta()
-        #print(etree.tostring(resources_meta, pretty_print=True))
         self.generate_resources_meta()
 
         # read in master xslt file
@@ -49,6 +46,9 @@ class Blogilainen(object):
         # go through each file and generate output
         for s in self.sources:
             xml = etree.parse(s.source)
+
+            if len(s.targets) == 0:
+                logging.info("WARNING: %s has no target formats" % s.source)
 
             # generate for each target
             for ext,t in s.targets.iteritems():
@@ -61,9 +61,9 @@ class Blogilainen(object):
                     content = etree.tostring(transform(xml, format=etree.XSLT.strparam(t.ext)))
                     if content:
                         fh.write(content)
-                        print("OK: %s -> %s" % (s.source, t.out))
+                        logging.info("OK: %s -> %s" % (s.source, t.out))
                     else:
-                        print("FAILED: %s -> %s" % (s.source, t.out))
+                        logging.info("FAILED: %s -> %s" % (s.source, t.out))
 
 
     def generate_resources_meta(self):
@@ -87,26 +87,23 @@ class Blogilainen(object):
             # get relative path starting from self.source_dir
             source_file_relative_path = os.path.relpath(source_file_path, self.source_dir)
 
-            get_formats = etree.XPath("//meta[@name='Format']/@content")
+            get_formats = etree.XPath("//meta[@name='dcterms.Format']/@content")
             for f in filenames:
-                if f.endswith('.xml'):
-                    # append a Source object to sources files list
-                    s = Source(os.path.abspath(source_file_path), source_file_relative_path, f)
-                    xml = etree.parse(s.source)
-                    formats = get_formats(xml)
+                # append a Source object to sources files list
+                s = Source(os.path.abspath(source_file_path), source_file_relative_path, f)
+                xml = etree.parse(s.source)
+                formats = get_formats(xml)
 
-                    basename,ext = os.path.splitext(s.source_file)
-                    for format in formats:
-                        physical_path = os.path.abspath(os.path.join(self.out_dir, s.relative_path))
-                        outfile = "%s.%s" % (basename, format)
-                        target = Target(s, physical_path, outfile, format)
-                        s.add_target(target)
-                        
-                        # XXX: only use one format for now
-                        break
+                for ext in formats:
+                    physical_path = os.path.abspath(os.path.join(self.out_dir, s.relative_path))
+                    target = Target(s, physical_path, s.basename, ext)
+                    s.add_target(target)
+                    
+                    # XXX: only use one format for now
+                    break
 
-                    self.sources.append(s)
-        #print(self.sources)
+                self.sources.append(s)
+        logging.debug(self.sources)
 
 
     def _load_resource_plugins(self):
@@ -115,7 +112,6 @@ class Blogilainen(object):
 
     def _load_plugins(self, plugin_type, store):
         # read in and import available resource plugins
-        #print(os.path.join(os.path.dirname(__file__), 'plugins', plugin_type, 'enabled'))
         module = None
         for py in os.listdir(os.path.join(os.path.dirname(__file__), 'plugins', plugin_type, 'enabled')):
             basename,ext = os.path.splitext(py)
@@ -123,7 +119,7 @@ class Blogilainen(object):
                 continue
 
             module = "%s.%s.enabled.%s" % (BASE_PACKAGE, plugin_type, basename)
-            print("Found %s plugin: %s" % (plugin_type, module))
+            logging.info("Found %s plugin: %s" % (plugin_type, module))
             cls = 'Plugin'
             try:
                 __import__(module, locals(), globals())

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:exsl="http://exslt.org/common">
+    >
 
     <xsl:param name="format"/>
+    <xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" />
 
     <!-- load in 'all-resources-meta.xml' -->
     <xsl:variable name="all-resources-meta" select="document('all-resources-meta.xml')"/>
@@ -11,6 +12,7 @@
     <xsl:template match="/">
         <xsl:choose>
             <xsl:when test="$format = 'html'">
+
                 <xsl:apply-templates mode="html"/>
             </xsl:when>
         </xsl:choose>
@@ -30,9 +32,9 @@
                             <li>
                                 <a>
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="concat('file:///Users/konker/WORKING/blogilainen/public', target-meta/target[@type=$format]/meta[@name='virtual-path']/@content, '/', target-meta/target[@type=$format]/meta[@name='out-file']/@content)"/>
+                                        <xsl:value-of select="concat('file:///Users/konker/WORKING/blogilainen/public', '/', target-meta/target[@type=$format]/meta[@name='out']/@content)"/>
                                     </xsl:attribute>
-                                    <xsl:value-of select="source-meta/meta[@name='Identifier']/@content"/>
+                                    <xsl:value-of select="source-meta/meta[@name='dcterms.Identifier']/@content"/>
                                 </a>
                             </li>
                         </xsl:for-each>
@@ -62,11 +64,11 @@
     </xsl:template>
 
     <xsl:template name="page-date">
-        <h2 class="date"><xsl:value-of select="/resource/head/meta[@name='Date']/@content"/></h2>
+        <h2 class="date"><xsl:value-of select="/resource/head/meta[@name='dcterms.Date']/@content"/></h2>
     </xsl:template>
 
     <xsl:template name="page-creator">
-        <h2 class="date"><xsl:value-of select="/resource/head/meta[@name='Creator']/@content"/></h2>
+        <h2 class="creator"><xsl:value-of select="/resource/head/meta[@name='dcterms.Creator']/@content"/></h2>
     </xsl:template>
 
     <xsl:template match="em">
