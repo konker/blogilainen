@@ -10,19 +10,6 @@
         <meta name="dcterms.Subject" content="Resume"/>
     </head>
     <body>
-        <markdown>
-# H2.Hello
-I am markdown!
-
-*hear my roar!*
-
-  - hear it
-  - tremble
-
-        I suppose this is some code or other?
-
-The quick brown markdow, etc...
-        </markdown>
         <p class="leader">
             A small daemon which monitors changes in a directory and automatically syncs it to a remote git repository.
         </p>
