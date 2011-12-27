@@ -4,6 +4,11 @@ Blogilainen
 - is the whole idea flawed?
     - revert to wiki or markdown?
         - use existing system such as jekyll, etc?
+    - extend markdown (or similar?)
+        - sections
+        - class
+        - id
+
 
 - what could we do to drastically simplify?
     - assume html output, in one place

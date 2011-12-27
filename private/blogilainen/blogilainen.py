@@ -4,6 +4,7 @@
 import os
 import sys
 import logging
+import markdown
 from lxml import etree
 from source import Source
 from target import Target
@@ -35,6 +36,26 @@ class Blogilainen(object):
         logging.info("resources_meta_file: %s" % self.resources_meta_file)
 
 
+    def process_other(self, xml):
+        xml_dash = self._process_markdown(xml)
+        # ... could be others
+        return xml_dash
+
+
+    def _process_markdown(self, xml):
+        get_markdown = etree.XPath("//markdown")
+        markdowns = get_markdown(xml)
+        for md in markdowns:
+            print(md)
+            #print(etree.tostring(m, pretty_print=True))
+            md_parent = md.getparent()
+            xml_s = "<div>%s</div>" % markdown.markdown(md.text) 
+            print('---')
+            print(xml_s)
+            print('---')
+            md_parent.replace(md, etree.fromstring(xml_s))
+        return xml
+
     def generate(self):
         # generate the aggregate resources meta data and write it to file
         # XXX: param to govern overwriting of this file?
@@ -46,6 +67,9 @@ class Blogilainen(object):
         # go through each file and generate output
         for s in self.sources:
             xml = etree.parse(s.source)
+
+            # process markdown
+            xml = self.process_other(xml)
 
             if len(s.targets) == 0:
                 logging.info("WARNING: %s has no target formats" % s.source)
