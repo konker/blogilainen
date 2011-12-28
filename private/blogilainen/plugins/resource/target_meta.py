@@ -1,4 +1,6 @@
 
+import os
+import re
 import logging
 from lxml import etree
 from blogilainen.plugins import BasePlugin
@@ -10,13 +12,14 @@ class Plugin(BasePlugin):
         for ext,t in source.targets.iteritems():
             target = etree.Element('target', type=ext)
 
-            # XXX: out_path is not the same as virtual_path (i.e. path sep is not necessarily '/')
-            target.append(etree.Element('meta', name='out-path', content=t.out_path))
+            # make sure out path is separated by '/'
+            out_path = re.sub(os.sep, '/', t.relative_path)
+
+            target.append(etree.Element('meta', name='out-path', content=out_path))
             target.append(etree.Element('meta', name='basename', content=t.basename))
             target.append(etree.Element('meta', name='ext', content=t.ext))
             target.append(etree.Element('meta', name='out-file', content=t.out_file))
             target.append(etree.Element('meta', name='out', content=t.out_url))
-            #target.append(etree.Element('meta', name='out', content=t.out))
 
             target_meta.append(target)
 

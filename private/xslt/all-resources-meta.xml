@@ -1,12 +1,13 @@
 <resources>
   <resource>
-    <source-meta><meta name="dcterms.Identifier" content="autosync-git-repository"/>
+    <source-meta><meta name="dcterms.Identifier" content="konrad-markus"/>
         <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
         <meta name="dcterms.Creator" content="Konrad Markus"/>
         <meta name="dcterms.Format" content="html"/>
         <meta name="dcterms.Subject" content="Programming"/>
         <meta name="dcterms.Subject" content="Python"/>
         <meta name="dcterms.Subject" content="Git"/>
+        <meta name="Navigation.1" content="index"/>
     </source-meta>
     <target-meta>
       <target type="html">
@@ -26,53 +27,57 @@
     </system-meta>
   </resource>
   <resource>
+    <source-meta><meta name="dcterms.Identifier" content="konrad-markus"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Programming"/>
+        <meta name="dcterms.Subject" content="Python"/>
+        <meta name="dcterms.Subject" content="Git"/>
+        <meta name="Navigation.1" content="contact"/>
+    </source-meta>
+    <target-meta>
+      <target type="html">
+        <meta content="contact" name="out-path"/>
+        <meta content="index" name="basename"/>
+        <meta content="html" name="ext"/>
+        <meta content="index.html" name="out-file"/>
+        <meta content="contact/index.html" name="out"/>
+      </target>
+    </target-meta>
+    <system-meta>
+      <meta content="contact" name="source-path"/>
+      <meta content="index" name="basename"/>
+      <meta content="xml" name="ext"/>
+      <meta content="index.xml" name="source-file"/>
+      <meta content="contact/index.xml" name="source"/>
+    </system-meta>
+  </resource>
+  <resource>
     <source-meta><meta name="dcterms.Identifier" content="cv"/>
         <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
         <meta name="dcterms.Creator" content="Konrad Markus"/>
         <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Curriculum Vitae"/>
         <meta name="dcterms.Subject" content="CV"/>
         <meta name="dcterms.Subject" content="Resume"/>
+        <meta name="Navigation.1" content="cv"/>
     </source-meta>
     <target-meta>
       <target type="html">
         <meta content="cv" name="out-path"/>
-        <meta content="home" name="basename"/>
+        <meta content="index" name="basename"/>
         <meta content="html" name="ext"/>
-        <meta content="home.html" name="out-file"/>
-        <meta content="cv/home.html" name="out"/>
+        <meta content="index.html" name="out-file"/>
+        <meta content="cv/index.html" name="out"/>
       </target>
     </target-meta>
     <system-meta>
       <meta content="cv" name="source-path"/>
-      <meta content="home" name="basename"/>
+      <meta content="index" name="basename"/>
       <meta content="xml" name="ext"/>
-      <meta content="home.xml" name="source-file"/>
-      <meta content="cv/home.xml" name="source"/>
-    </system-meta>
-  </resource>
-  <resource>
-    <source-meta><meta name="dcterms.Identifier" content="cv-bar"/>
-        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
-        <meta name="dcterms.Creator" content="Konrad Markus"/>
-        <meta name="dcterms.Format" content="html"/>
-        <meta name="dcterms.Subject" content="Bar"/>
-        <meta name="dcterms.Subject" content="Baz"/>
-    </source-meta>
-    <target-meta>
-      <target type="html">
-        <meta content="cv/foo" name="out-path"/>
-        <meta content="bar" name="basename"/>
-        <meta content="html" name="ext"/>
-        <meta content="bar.html" name="out-file"/>
-        <meta content="cv/foo/bar.html" name="out"/>
-      </target>
-    </target-meta>
-    <system-meta>
-      <meta content="cv/foo" name="source-path"/>
-      <meta content="bar" name="basename"/>
-      <meta content="xml" name="ext"/>
-      <meta content="bar.xml" name="source-file"/>
-      <meta content="cv/foo/bar.xml" name="source"/>
+      <meta content="index.xml" name="source-file"/>
+      <meta content="cv/index.xml" name="source"/>
     </system-meta>
   </resource>
 </resources>

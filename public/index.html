@@ -1,28 +1,75 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html><head><title>INDEX: Syncilainen - Automatically sync file changes to a Git repository</title><meta name="dcterms.Identifier" content="autosync-git-repository"/><meta name="dcterms.Date" content="2011-12-12T16:36:00"/><meta name="dcterms.Creator" content="Konrad Markus"/><meta name="dcterms.Format" content="html"/><meta name="dcterms.Subject" content="Programming"/><meta name="dcterms.Subject" content="Python"/><meta name="dcterms.Subject" content="Git"/></head><body>
-                [html]
-                <nav id="main-nav"><ul><li><a href="file:///Users/konker/WORKING/blogilainen/public/index.html">autosync-git-repository</a></li><li><a href="file:///Users/konker/WORKING/blogilainen/public/cv/home.html">cv</a></li><li><a href="file:///Users/konker/WORKING/blogilainen/public/cv/foo/bar.html">cv-bar</a></li></ul></nav><hr/><div id="content"><h1>INDEX: Syncilainen - Automatically sync file changes to a Git repository</h1><h2 class="date">2011-12-12T16:36:00</h2><h2 class="creator">Konrad Markus</h2><p class="leader">
-            A small daemon which monitors changes in a directory and automatically syncs it to a remote git repository.
-        </p><p>
-            I have git a repository <a href="git-on-s3">hosted ultimately on S3</a> in which I store notes and other sundry (mostly text-based) files. I wanted a way to automatically sync these to the remote repository, without having to manually add/commit/push. Mostly for convenience.
-        </p><p>
-            So syncilainen was born. It's written in python and relies on the git command-line tool being installed on the system. It then uses <a href="http://pypi.python.org/pypi/MacFSEvents/0.2.1">MacFSEvents</a> on Mac OSX, or <a href="https://github.com/seb-m/pyinotify">pyinotify</a> on Linux, to watch for filesystem events; e.g. writing to a file, removing a file etc. Once an event is detected, a callback function is triggered, which in this case does a git add/commit in the watched directory, and then pushes to the remote repository.
-        </p><p>
-            It tries to be conservative when a conflict is detected, however the system is not really designed to withstand heavy collaborative use.
-        </p><p>
-            If a conflict is detected, the remote's version (<em style="color:#ff0000">"theirs"</em>) is renamed with the sha1 hash prepended to the filename, and the local copy (<em style="color:#ff0000">"ours"</em>) is forced as the current version. This works OK when I am the only person editing stuff at the same time, and I only have different instances on the diffrerent computers that I use.
-        </p><p>
-            I am considering to add a periodic git pull action, to make sure that the local repository is up to date, even if no filesystem events have been executed.
-        </p><p>
-            Syncilainen use the python <a href="http://docs.python.org/library/subprocess.html">subprocess</a> module to make system calls to the git command line tool.
-        </p><p>
-            Syncilainen is configured with a JSON formatted config file which can be specified when invoking syncilainen, or to "syncilainen.json" by default.
-        </p><p>
-            It is possibe to daemonize syncilainen, such that it works "behind the scenes". At the moment, current approaches are conflicting with the use of the subprocess module to invoke the git command line. A workaround for this problem is in progress.
-        </p><p>
-            The code has made an attempt at a structure such that different filesystem event libraries or different version control systems could be used, (indeed ultimately any kind of callback could be writted). However at this time, only git has been tried as a version contol backend.
-        </p><p>
-            Syncialinen optionally uses growlnotify on Mac OS X, or notifysend on Linux (XXX: gnome?) to display notification messages when the callback is triggered.
-        </p><h2>Code</h2><p>
-           <a href="http://github.com/konker/syncilainen">http://github.com/konker/syncilainen</a> 
-        </p></div></body></html>
+<html lang="en" class="no-js"><head><title>Konrad Markus</title><meta name="dcterms.Identifier" content="konrad-markus"/><meta name="dcterms.Date" content="2011-12-12T16:36:00"/><meta name="dcterms.Creator" content="Konrad Markus"/><meta name="dcterms.Format" content="html"/><meta name="dcterms.Subject" content="Programming"/><meta name="dcterms.Subject" content="Python"/><meta name="dcterms.Subject" content="Git"/><meta name="Navigation.1" content="index"/><meta name="MSSmartTagsPreventParsing" content="TRUE"/><meta name="fb:admins" content="574602300"/><meta name="generator" content="KVDM"/><meta name="author" content="KVDM"/><meta name="copyright" content="Copyright (c) 2011 Konrad Markus"/><link rel="stylesheet" href="/assets/css/style.css?v=2"/><link rel="stylesheet" href="/assets/css/content.css?v=2"/><link href="http://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet" type="text/css"/></head><body><div id="container"><header><h1>Konrad Markus</h1><nav id="mainNav"><ul><li class="selected"><a href="/">Home</a></li><li><a href="/cv/" title="My Curriculum Vitae">cv</a></li><li><a href="/contact/" title="Contact Details">contact</a></li></ul></nav></header><div id="main">
+        <div id="skills">
+            <h2 class="hide">Skills</h2>
+            <span class="s5">Python</span>,
+            <span class="s4">Perl</span>,
+            <span class="s3">PHP</span>,
+            <span class="s3">Ruby</span>,
+            <span class="s4">SQL</span>,
+            <span class="s4">Object Oriented Analysis/Design</span>,
+            <span class="s3">Design Patterns</span>,
+            <span class="s4">Web Applications</span>,
+            <span class="s4">Content Management</span>,
+            <span class="s3">E-Commerce</span>,
+            <span class="s4">MySQL</span>,
+            <span class="s5">Apache</span>,
+            <span class="s3">NginX</span>,
+            <span class="s3">SQLite</span>,
+            <span class="s2">Redis</span>,
+            <span class="s3">Rails</span>,
+            <span class="s5"><abbr title="Hypertext Markup Language">HTML</abbr></span>,
+            <span class="s5"><abbr title="Cascading Style Sheets">CSS</abbr></span>,
+            <span class="s5">Javascript</span>,
+            <span class="s3">JQuery</span>,
+            <span class="s3">Accessibility</span>,
+            <span class="s2">Node.js</span>,
+            <span class="s3"><abbr title="Peer-to-Peer">P2P</abbr></span>,
+            <span class="s4">Web standards</span>,
+            <span class="s2"><abbr title="Search Engine Optimisation">SEO</abbr></span>,
+            <span class="s3"><abbr title="Document Object Model">DOM</abbr></span>,
+            <span class="s4"><abbr title="Asynchronous Javascript and XML">AJAX</abbr></span>,
+            <span class="s3">Websockets</span>,
+            <span class="s2"><abbr title="XML User Interface Language">XUL</abbr></span>,
+            <span class="s2">Actionscript</span>,
+            <span class="s1">processing.js</span>,
+            <span class="s2"><abbr title="Cross-Origin Resource Sharing">CORS</abbr></span>,
+            <span class="s3"><abbr title="Amazon Elastic Compute Cloud">EC2</abbr></span>,
+            <span class="s3">Amazon Web Services</span>,
+            <span class="s5"><abbr title="Extensible Markup Language">XML</abbr></span>,
+            <span class="s5"><abbr title="Extensible Stylesheet Language Transformations">XSLT</abbr></span>,
+            <span class="s3">XML Schema</span>,
+            <span class="s2"><abbr title="Web Services Description Language">WSDL</abbr></span>,
+            <span class="s3">Firefox extensions</span>,
+            <span class="s2">BBC DNA</span>,
+            <span class="s5"><abbr title="Common Gateway Interface">CGI</abbr></span>,
+            <span class="s5"><abbr title="Hypertext Transfer Protocoal">HTTP</abbr></span>,
+            <span class="s4"><abbr title="REpresentational State Transfer">REST</abbr></span>,
+            <span class="s1">Team Lead</span>,
+            <span class="s3">Technical documentation</span>,
+            <span class="s2">Pitches</span>,
+            <span class="s1">Academic Research</span>,
+            <span class="s2">shell scripting</span>,
+            <span class="s1">Unix admin</span>,
+            <span class="s2">Linux</span>,
+            <span class="s4">Subversion</span>,
+            <span class="s4">Git</span>
+        </div>
+        <p class="homeInfo">
+            For further information you can view my <a href="/cv/"><abbr title="Curriculum Vitae / Resume">CV</abbr></a>, or <a href="/contact/">Contact</a> me.
+            <!--
+            For further information you can
+            have a look at an occasional technical  <a href="http://blog.konradmarkus.com/">Blog</a> that I maintain, read descriptions and links to some of the <a href="/code/">Code</a> that I have written. Additionally, view my <a href="/cv/"><abbr title="Curriculum Vitae / Resume">CV</abbr></a>, or <a href="/contact/">Contact</a> me.
+            -->
+        </p>
+        <p class="badges">
+            <a href="http://www.linkedin.com/in/konradmarkus" title="View Konrad Markus's profile on LinkedIn"><img src="/assets/images/linkedin-logo.png" alt="View Konrad Markus's profile on LinkedIn"/></a>
+            <a href="http://www.twitter.com/konker" title="Konrad Markus on Twittter"><img src="/assets/images/twitter.png" alt="Konrad Markus on Twittter"/></a>
+            <a href="http://www.github.com/konker" title="Konrad Markus on GitHub"><img src="/assets/images/github.png" alt="Konrad Markus on GitHub"/></a>
+        </p>
+    </div><footer><p>&copy; 2007-2012 <a href="http://konradmarkus.com/" title="Konrad Markus">Konrad Markus</a> | 
+                            <a href="http://validator.w3.org/check?uri=referer" title="Valid HTML">HTML</a> |
+                            <a href="http://jigsaw.w3.org/css-validator/check/referrer" title="Valid CSS">CSS</a> |
+                            Design by <a href="http://milkmilklemonadearoundthecornerchocolatesmade.com/" title="Milk Milk, Lemonade, Aroud the Corner Chocolate's Made">Milk Milk, Lemonade</a> |
+                            Build by <a href="http://morningwoodsoftware.com/" title="Morningwood Software">Morningwood Software</a> |
+                            <a href="http://www.linode.com/?r=fd388bb5ef75c0e610250fee39e291a713e5a450" title="Hosting by Linode" class="linode"><img src="/assets/images/linode.png" alt="Hosting by Linode"/></a></p></footer></div></body></html>

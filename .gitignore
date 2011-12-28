@@ -4,6 +4,7 @@ __scrap
 *.py[co]
 *.log
 *.pid
+public/assets
 
 # Packages
 *.egg

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<resource>
+    <head>
+        <title>Konrad Markus</title>
+        <meta name="dcterms.Identifier" content="konrad-markus"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Programming"/>
+        <meta name="dcterms.Subject" content="Python"/>
+        <meta name="dcterms.Subject" content="Git"/>
+        <meta name="Navigation.1" content="contact"/>
+    </head>
+    <body>
+        <h2>Contact Details</h2>
+        <div class="contactDetails">
+            <p>
+                <img src="/assets/images/fi_icon.png" alt=""/> I currently reside in Helsinki, Finland.
+            </p>
+            <p>
+                <a href="mailto:me@konradmarkus.com">me@konradmarkus.com</a>
+            </p>
+            <p>
+                <a href="tel:358-4-6666-7901">+358 (0) 4 6666 7901</a>
+            </p>
+        </div>
+        <p class="badges">
+            <a href="http://www.linkedin.com/in/konradmarkus" title="View Konrad Markus's profile on LinkedIn"><img src="/assets/images/linkedin-logo.png" alt="View Konrad Markus's profile on LinkedIn"/></a>
+            <a href="http://www.twitter.com/konker" title="Konrad Markus on Twittter"><img src="/assets/images/twitter.png" alt="Konrad Markus on Twittter"/></a>
+            <a href="http://www.github.com/konker" title="Konrad Markus on GitHub"><img src="/assets/images/github.png" alt="Konrad Markus on GitHub"/></a>
+        </p>
+    </body>
+</resource>

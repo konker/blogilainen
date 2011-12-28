@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<resource>
+    <head>
+        <title>Konrad Markus - Curriculum Vitae</title>
+        <meta name="dcterms.Identifier" content="cv"/>
+        <meta name="dcterms.Date" content="2011-12-12T16:36:00"/>
+        <meta name="dcterms.Creator" content="Konrad Markus"/>
+        <meta name="dcterms.Format" content="html"/>
+        <meta name="dcterms.Subject" content="Curriculum Vitae"/>
+        <meta name="dcterms.Subject" content="CV"/>
+        <meta name="dcterms.Subject" content="Resume"/>
+        <meta name="Navigation.1" content="cv"/>
+    </head>
+    <body>
+        <div class="inner" id="cv">
+            <h2>Curriculum Vitae</h2>
+
+            <div class="personal">
+                <dl>
+                    <dt>Name</dt>
+                    <dd><strong>Konrad Markus</strong></dd>
+                    <dt>Nationality</dt>
+                    <dd>British</dd>
+                    <dt>Electronic</dt>
+                    <dd><a href="http://konradmarkus.com/cv/">http://konradmarkus.com/cv/</a></dd>
+                    <dt class="sections">Sections</dt>
+                    <dd class="sections">
+                        <a href="#work">Work</a> |
+                        <a href="#education">Education</a> |
+                        <a href="#referees">Referees</a>
+                    </dd>
+                </dl>
+                <div class="clr"></div>
+            </div>
+
+            <p class="blurb">
+                <q>"A versatile and experienced web developer<br/>with a wide range of front-end and back-end skills."</q>
+            </p>
+
+            <div id="skills">
+                <h2 class="hide">Skills</h2>
+                <span class="s5">Python</span>,
+                <span class="s4">Perl</span>,
+                <span class="s3">PHP</span>,
+                <span class="s3">Ruby</span>,
+                <span class="s4">SQL</span>,
+                <span class="s4">Object Oriented Analysis/Design</span>,
+                <span class="s3">Design Patterns</span>,
+                <span class="s4">Web Applications</span>,
+                <span class="s4">Content Management</span>,
+                <span class="s3">E-Commerce</span>,
+                <span class="s4">MySQL</span>,
+                <span class="s5">Apache</span>,
+                <span class="s3">NginX</span>,
+                <span class="s3">SQLite</span>,
+                <span class="s2">Redis</span>,
+                <span class="s3">Rails</span>,
+                <span class="s5"><abbr title="Hypertext Markup Language">HTML</abbr></span>,
+                <span class="s5"><abbr title="Cascading Style Sheets">CSS</abbr></span>,
+                <span class="s5">Javascript</span>,
+                <span class="s3">JQuery</span>,
+                <span class="s3">Accessibility</span>,
+                <span class="s2">Node.js</span>,
+                <span class="s3"><abbr title="Peer-to-Peer">P2P</abbr></span>,
+                <span class="s4">Web standards</span>,
+                <span class="s2"><abbr title="Search Engine Optimisation">SEO</abbr></span>,
+                <span class="s3"><abbr title="Document Object Model">DOM</abbr></span>,
+                <span class="s4"><abbr title="Asynchronous Javascript and XML">AJAX</abbr></span>,
+                <span class="s3">Websockets</span>,
+                <span class="s2"><abbr title="XML User Interface Language">XUL</abbr></span>,
+                <span class="s2">Actionscript</span>,
+                <span class="s1">processing.js</span>,
+                <span class="s2"><abbr title="Cross-Origin Resource Sharing">CORS</abbr></span>,
+                <span class="s3"><abbr title="Amazon Elastic Compute Cloud">EC2</abbr></span>,
+                <span class="s3">Amazon Web Services</span>,
+                <span class="s5"><abbr title="Extensible Markup Language">XML</abbr></span>,
+                <span class="s5"><abbr title="Extensible Stylesheet Language Transformations">XSLT</abbr></span>,
+                <span class="s3">XML Schema</span>,
+                <span class="s2"><abbr title="Web Services Description Language">WSDL</abbr></span>,
+                <span class="s3">Firefox extensions</span>,
+                <span class="s2">BBC DNA</span>,
+                <span class="s5"><abbr title="Common Gateway Interface">CGI</abbr></span>,
+                <span class="s5"><abbr title="Hypertext Transfer Protocoal">HTTP</abbr></span>,
+                <span class="s4"><abbr title="REpresentational State Transfer">REST</abbr></span>,
+                <span class="s1">Team Lead</span>,
+                <span class="s3">Technical documentation</span>,
+                <span class="s2">Pitches</span>,
+                <span class="s1">Academic Research</span>,
+                <span class="s2">shell scripting</span>,
+                <span class="s1">Unix admin</span>,
+                <span class="s2">Linux</span>,
+                <span class="s4">Subversion</span>,
+                <span class="s4">Git</span>
+            </div>
+
+            <h2 id="work">
+                Work
+                <a href="#container">^ top</a>
+            </h2>
+            <div class="job" id="job-hiit">
+                <h3>2008-2011 Helsinki Institute for Information Technology HIIT, Helsinki</h3>
+                <h4>Tekninen Asiantuntija (Technology Specialist)</h4>
+                <p>
+                HIIT is a joint research institution of Aalto University and the University of Helsinki, two of Finland's leading universities.
+                My role here was to draw on real-world experience and lend practical implementation support to a variety of projects based in the <a href="http://hiit.fi/fi">Future Internet</a> and <a href="http://hiit.fi/ns">Network Society</a> research programmes.
+                </p>
+                <p>
+                Highlights include: working on a peer-to-peer social network called <a href="http://www.peerscape.org/">Peerscape</a>; collaborating on <a href="http://www.browsersocket.org">BrowserSocket</a>, a proof-of-concept socket listener exposed to javascript in a browser; running a code-camp at the University of Helsinki; running a code-camp at the University of Nairobi as part of the diversification of the <a href="http://sizl.org/">OtaSizzle</a> living-lab project; and helping to create an iphone-based interface to a home energy-sensing network for the <a href="http://www.energyawareness.eu/beaware/">BeAware</a> project which was a consortium made up of members from Finland, Sweden and Italy.
+                </p>
+                <p>
+                This work was set in an atmosphere of experimentation and learning, so I had the freedom to persue interesting angles or technologies as projects required them, and to collaborate with a diverse range of people and fields. Also the involvement with the teaching side of the institute's activities was a rewarding change from my usual work.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Projects:</dt>
+                        <dd class="clients">
+                        Peerscape, Openlookup, BrowserSocket, BeAware, OtaSizzle
+                        </dd>
+                        <dt>Work:</dt>
+                        <dd class="work">
+                        Python, Javascript, Ruby/Rails, Firefox extensions, mobile development, Twitter API, Amazon Web Services, SQL, MapReduce, P2P, Websockets, Academic research, Teaching, Technical documentation.
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="job" id="job-e3">
+                <h3>2005-2008 E3 Media, London</h3>
+                <h4>Senior Developer</h4>
+                <p>
+                This Bristol based digital agency took on a number of people to seed its expansion into London. I was taken on to lead the technical side of the London office. As this was started as a small venture which would grow itself I was placed in a position where I had to cover both front-end and back-end technical work as well as being involved in the technical aspects of pitches and working with designers and producers advising in a technical capacity.
+                </p>
+                <p>
+                During this time front-end work was rigorously focused on accessibility, standards and best practices, whilst also unobtrusively providing modern and interactive interfaces.
+                </p>
+                <p>
+                A large client that we worked with was the BBC. The work was based on DNA, the BBC's in-house user generated content platform. I was tasked with going in and learning the system whilst providing maintenance. As a result of my work we were commissioned for further high-profile jobs involving the DNA platform. I was in effect seconded to the BBC to provide the technical resource during the build of these projects.  I worked in various departments of the BBC and was involved in technical work, pitches for further work, liaising with clients as to the direction their sites would take, and working with our internal account managers on developing the BBC account.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Clients:</dt>
+                        <dd class="clients">
+                        BBC 606, BBC Memoryshare, BBC Collective, BBC Comedy, BBC Education, Sony, Living TV, Orange, Kia, Triumph, Greenpeace, Victoria &amp; Albert Museum, Toni &amp; Guy, Environment Agency, Countryside Access, FirstPlus, HSA.
+                        </dd>
+                        <dt>Work:</dt>
+                        <dd class="work">
+                        (X)HTML, CSS, Javascript, Accessibility, Web standards, SEO, DOM, AJAX, Actionscript, PHP, Perl, SQL, Content Management, Drupal, eZ Publish, XML, XSLT, DNA, Team Lead, Technical documentation, Pitches, Client Liaison, Cost estimates, Managing contractors
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="job" id="job-butterfly-effect">
+                <h3>2004-2005 Butterfly Effect, London</h3>
+                <h4>Lead Developer</h4>
+                <p>
+                Butterfly Effect was started as an offshoot of Dimension Data to develop a more design led brand which would enable the servicing of smaller non-corporate clients and to do more specialist and innovative work.
+                </p>
+                <p>
+                This was a smaller agency and my role was to lead the technical aspect of the team including the technical part of pitches, advising on and designing technical solutions to often smaller budgets and constraints, working with a variety of existing systems and coding both front-end and back-end systems.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Clients</dt>
+                        <dd class="clients">
+                        Disney, VH1, MTV Base, Tarmac, English National Ballet, Nickelodeon
+                        </dd>
+                        <dt>Work</dt>
+                        <dd class="work">
+                        (X)HTML, CSS, Javascript, Accessibility, SEO, WAP, Actionscript, XML, XSLT, PHP, Perl, SQL, Technical documentation, Pitches, Client Liaison, Cost estimates, Managing contractors
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="job" id="job-proxicom">
+                <h3>2001-2004 Proxicom / Dimension Data, London</h3>
+                <h4>Technical Consultant</h4>
+                <p>
+                I joined Proxicom, a large American e-business company which later was acquired by Dimension Data. Here I was exposed to larger scale projects and larger teams. I worked with a complete lifecycle of analysis, design, build and test, working alongside business analysts, designers, information architects, copywriters, producers, project managers and the various technical roles.
+                </p>
+                <p>
+                My role focused on font-end development and the integration of front-end code with back-end systems. I was able to span these in varying degrees. Clients included sports and entertainment brands, pharmaceutical companies, public sector and government clients and financial companies.
+                </p>
+                <p>
+                On a personal note, during this time my job was held open allowing me to take a six month sabbatical to travel in South America.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Clients</dt>
+                        <dd class="clients">
+                        Manchester United Football Club, Sky Interactive, Ferring Pharmaceuticals, AstraZeneca, Royal &amp; SunAlliance, Feld Entertainment
+                        </dd>
+                        <dt>Work</dt>
+                        <dd class="work">
+                        (X)HTML, CSS, Javascript, DHTML, XML, XSLT, Stellent CMS, MCMS Server, SQL, ASP.Net, C#, PHP, Perl, Actionscript
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="job" id="job-takeu2">
+                <h3>2000-2001 takeU2.com, London</h3>
+                <h4>Founder/Architect/Developer</h4>
+                <p>
+                I was part of a small team which founded an internet venture backed by private funding. I was in charge of the design and development of the web site as well as assisting in the business side of the operation from a technical perspective.
+                </p>
+                <p>
+                takeU2.com was, at the time, an innovative idea which provided venue listings and reviews and allowed events and meetings to be organized around these venues. The main interface was a scrollable London Underground map which we obtained an exclusive license to use in this way.
+                </p>
+                <p>
+                Due to the startup nature of the venture, we had free reign to design and build the site in any way we saw fit. We chose principally open source technologies and were early adopters of JSP 1.0 backed by a Java object model and a Sybase RDBMS. Bespoke content management and moderation systems were built in addition to the public facing site. My role was by necessity multi-facetted and included system architecture, JSP, Java, JDBC, SQL, Sybase admin, HTML/DHTML, Unix admin, Shell scripting, Usability testing, and customer relations.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Clients</dt>
+                        <dd class="clients">
+                        N/A
+                        </dd>
+                        <dt>Work</dt>
+                        <dd class="work">
+                        Systems Architecture / Design, Java, JSP, Servlets, RMI, Tomcat, Sybase ASE, SQL, Perl, shell scripting, Unix admin, Networking, XML, XSLT, HTML, DHTML, Javascript, WAP, WML, usability, security, customer relations.
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="job" id="job-wcj">
+                <h3>1999-2000 Wunderman Cato Johnson, London</h3>
+                <h4>Internet Programmer</h4>
+                <p>
+                I joined the web arm of this global advertising company servicing their clients such as Ford, Ericsson, Xerox, Visteon and StarAlliance.
+                </p>
+                <p>
+                The work included designing and developing database driven web functionality, writing and maintaining existing server-side Perl scripts across a range of territories, and writing HTML/DHTML code, Javascript and Java Applets.
+                </p>
+                <p>
+                For the final two months I worked on site at Ford as part of a team implementing a prototype for fordconnections.fi, the Finnish pilot for Ford's European e-commerce sites. This involved working with developers from IBM and Microsoft, clients from Ford and designers and analysts from Wunderman.
+                </p>
+                <div class="info">
+                    <dl>
+                        <dt>Clients</dt>
+                        <dd class="clients">
+                        Ford UK, Ford Sweden, Ford Germany, Fordconnections.fi, Ford Sport, Ericsson, Visteon, Brand Dialogue
+                        </dd>
+                        <dt>Work</dt>
+                        <dd class="work">
+                        Perl, SQL, CGI, HTML, Javascript
+                        </dd>
+                    </dl>
+                    <div class="clr"></div>
+                </div>
+            </div>
+
+            <h2 id="education">
+                Education
+                <a href="#container">^ top</a>
+            </h2>
+            <h3>1995-1998 University College London</h3>
+            <p class="education">
+            BSc Hons. Mathematics and Computer Science<br/>
+            </p>
+            <h3>1988-1995 Finchley Catholic High School</h3>
+            <p class="education">
+            3 A levels,
+            1 AS Level
+            10 GCSE,
+            </p>
+
+            <h2 id="referees">
+                Referees
+                <a href="#container">^ top</a>
+            </h2>
+            <p>
+            Available on request.
+            </p>
+        </div>
+    </body>
+</resource>

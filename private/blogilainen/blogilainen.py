@@ -83,20 +83,20 @@ class Blogilainen(object):
 
 
     def _load_sources(self):
-        for source_file_path, dirnames, filenames in os.walk(self.source_dir):
+        for source_file_physical_path, dirnames, filenames in os.walk(self.source_dir):
             # get relative path starting from self.source_dir
-            source_file_relative_path = os.path.relpath(source_file_path, self.source_dir)
+            source_file_relative_path = os.path.relpath(source_file_physical_path, self.source_dir)
 
             get_formats = etree.XPath("//meta[@name='dcterms.Format']/@content")
             for f in filenames:
                 # append a Source object to sources files list
-                s = Source(os.path.abspath(source_file_path), source_file_relative_path, f)
+                s = Source(os.path.abspath(source_file_physical_path), source_file_relative_path, f)
                 xml = etree.parse(s.source)
                 formats = get_formats(xml)
 
                 for ext in formats:
                     physical_path = os.path.abspath(os.path.join(self.out_dir, s.relative_path))
-                    target = Target(s, physical_path, s.basename, ext)
+                    target = Target(physical_path, s.relative_path, s.basename, ext)
                     s.add_target(target)
                     
                     # XXX: only use one format for now
